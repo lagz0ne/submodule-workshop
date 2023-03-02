@@ -1,0 +1,13 @@
+{
+  "name": "zero-to-one",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Duke <duc@silentium.io>",
+  "license": "MIT",
+  "dependencies": {
+    "@submodule/cli": "^2.4.0"
+  },
+  "scripts": {
+    "start": "submodule -r . test"
+  }
+}
