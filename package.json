@@ -8,6 +8,6 @@
     "@submodule/cli": "^2.4.0"
   },
   "scripts": {
-    "start": "submodule -r . test"
+    "start": "submodule test"
   }
 }
