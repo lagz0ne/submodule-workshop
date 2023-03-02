@@ -1,9 +1,14 @@
 import type { Submodule } from "@submodule/cli";
 import express from "express"
+import type { ZeroToOne } from "./submodule.types";
 
 export default {
   
-  async createCommands({ router }) {
+  createConfig() {
+    return { port: Number(process.env.EXPRESS_PORT || 3000)}  
+  },
+
+  async createCommands({ router, config }) {
     const routePaths = Object.keys(router)
 
     const server = express()
@@ -14,13 +19,13 @@ export default {
       const route = router[routePath]
       
       server.get('/' + routePath, async (req, res) => {
-        const result = await route.handle()
+        const result = await route.handle({})
         res.send(result)
       })
     }
 
-    server.listen(3000);
-    console.log('server is listening at port:', 3000)
+    server.listen(config.port);
+    console.log('server is listening at port:', config.port)
   }
 
-} satisfies Submodule
+} satisfies Submodule<ZeroToOne.Config>

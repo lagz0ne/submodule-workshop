@@ -391,9 +391,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@submodule/cli@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "@submodule/cli@npm:2.4.0"
+"@submodule/cli@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "@submodule/cli@npm:2.4.1"
   dependencies:
     "@opentelemetry/api": ">=1.0.0 <1.4.0"
     "@opentelemetry/exporter-trace-otlp-http": ^0.34.0
@@ -408,11 +408,12 @@ __metadata:
     esbuild: ^0.16.13
     esbuild-register: ^3.4.2
     glob: ^8.1.0
+    ts-toolbelt: ^9.6.0
     typescript: ^4.9.5
     zod: ^3.20.2
   bin:
     submodule: dist/cli.js
-  checksum: cab5e89cc2864bdccdc83f0747bbdf7a5615d7b8cf24e2ca21405004629bd37de881b5bb704b60d3512bea9a764c4402d0a5a9862a22e1655473a1f7f5a028d2
+  checksum: 19d57afaacfff46524b8f5a8401a33dcc1dda73504f352a443e5039974d15da8a36a219006e8f4cb7eac4087bd58597060cc64a028bfcbb36d9501bc6a686431
   languageName: node
   linkType: hard
 
@@ -1992,6 +1993,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-toolbelt@npm:^9.6.0":
+  version: 9.6.0
+  resolution: "ts-toolbelt@npm:9.6.0"
+  checksum: 9f35fd95d895a5d32ea9fd2e532a695b0bae6cbff6832b77292efa188a0ed1ed6e54f63f74a8920390f3d909a7a3adb20a144686372a8e78b420246a9bd3d58a
+  languageName: node
+  linkType: hard
+
 "type-is@npm:~1.6.18":
   version: 1.6.18
   resolution: "type-is@npm:1.6.18"
@@ -2106,7 +2114,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "zero-to-one@workspace:."
   dependencies:
-    "@submodule/cli": ^2.4.0
+    "@submodule/cli": ^2.4.1
     "@types/express": ^4.17.17
     express: ^4.18.2
   languageName: unknown
